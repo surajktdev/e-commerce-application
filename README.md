@@ -1,4 +1,6 @@
 # E-Commerce Application - Spring Boot Microservices
+Note : I am Developing this as per My plan so many things is not available for now 
+In future I am planning to create separate service for each module 
 
 A scalable and robust e-commerce application built using Spring Boot with plans for full microservices architecture. Currently implements User and Product management in a unified service, with comprehensive API documentation using Swagger/OpenAPI.
 
@@ -38,7 +40,6 @@ A scalable and robust e-commerce application built using Spring Boot with plans 
 
 ### Database
 - **PostgreSQL/MySQL** - Primary database
-- **H2** - In-memory database for testing
 
 ### Documentation & Testing
 - **Swagger/OpenAPI 3** - API documentation
@@ -75,7 +76,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/ecommerce_db
+    url: jdbc:postgresql://localhost:3306/e-commerce-db
     username: your_username
     password: your_password
     driver-class-name: org.postgresql.Driver
@@ -105,21 +106,11 @@ springdoc:
 
 **Using PostgreSQL:**
 ```sql
-CREATE DATABASE ecommerce_db;
+CREATE DATABASE e-commerce-db;
 CREATE USER ecommerce_user WITH PASSWORD 'your_password';
 GRANT ALL PRIVILEGES ON DATABASE ecommerce_db TO ecommerce_user;
 ```
 
-**Using H2 (Development):**
-```yaml
-spring:
-  datasource:
-    url: jdbc:h2:mem:testdb
-    driver-class-name: org.h2.Driver
-  h2:
-    console:
-      enabled: true
-```
 
 ### 4. Run the Application
 
@@ -140,7 +131,7 @@ docker build -t ecommerce-app .
 docker run -p 8080:8080 ecommerce-app
 ```
 
-## 📁 Current Project Structure
+## 📁 Current Project Structure(🚫Not correct)
 
 ```
 e-commerce-application/
